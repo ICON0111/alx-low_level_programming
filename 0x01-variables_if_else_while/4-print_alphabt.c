@@ -1,39 +1,22 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
 /**
- * main - Entry point
+ * main - entry point
  *
- * Return: Always 0
+ * Return: alway returns 0
+ *
  */
-
 int main(void)
 {
-	int d, p, q;
+	char a;
 
-	for (d = '0'; d < '9'; d++)
+	for (a = 'a'; a <= 'z' ; a++)
 	{
-		for (p = d + 1; p <= '9'; p++)
+		if (a == 'q' || a == 'e')
 		{
-			for (q = p + 1; q <= '9'; q++)
-			{
-				if ((p != d) != q)
-				{
-					putchar(d);
-					putchar(p);
-					putchar(q);
-
-					if (d == '7' && p == '8')
-						continue;
-
-					putchar(',');
-					putchar(' ');
-				}
-			}
+			continue;
 		}
+		putchar(a);
 	}
 	putchar('\n');
-
 	return (0);
 }
